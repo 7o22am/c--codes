@@ -1,0 +1,32 @@
+#include <iostream>
+#define ll long long
+using namespace std;
+int MOD= 1000000007;
+long long fast_power(long long base, long long power) {
+    long long result = 1;
+    while(power > 0) {
+ 
+        if(power & 1) { 
+            result = (result*base) % MOD;
+        }
+        base = (base * base) % MOD;
+        power >>=1; 
+    }
+    return result;
+}
+ 
+ll gcd(ll a, ll b)
+{
+	if (!b)return a;
+	return gcd(b, a%b);
+}
+ll lcm(ll a, ll b)
+{
+	ll temp = gcd(a, b);
+ 
+	return temp ? (a / temp * b) : 0;
+}
+ 
+int main() {
+	return 0;
+}

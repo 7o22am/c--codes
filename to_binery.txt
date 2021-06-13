@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	int  x,r,n=0,i=0;
+	cin >> x;
+	while (x != 0)
+	{
+		r = x % 2;
+		n = r *pow(10,i) + n;
+			x = x / 2;
+			i += 1;
+
+	}
+	cout << n << endl;
+
+
+
+	system("pause");
+}

@@ -1,0 +1,61 @@
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <sstream>
+#include <cmath>
+#include <math.h>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	std::ios_base::sync_with_stdio(0);
+	cin.tie(NULL);
+	cout.tie(NULL);
+
+	int  r, n = 0, m, i = 0, x, b = 0, c, q, w, z, sum = 0, s;
+	cin >> q >> w;
+	for (int e = 0; e < w; e++)
+	{
+		cin >> z;
+		for (int l = 0; l <= q; l++)
+		{
+			x = l;
+            n = 0;
+			i = 0;
+			while (x != 0)
+			{
+				r = x % 2;
+				n = r * pow(10, i) + n;
+				x = x / 2;
+				i += 1;
+
+			}
+			
+			m = n;
+            b = 0;
+			while (m != 0)
+			{
+				c = m % 10;
+				b = b + c;
+				m /= 10;
+			}
+			
+			if (b == z)
+				sum++;
+
+			
+			
+		}
+		
+         cout << sum << endl;
+		 sum = 0;
+	}
+             
+
+
+	system("pause");
+	return 0;
+}

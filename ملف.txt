@@ -1,0 +1,1 @@
+freopen("fruits.in", "r", stdin);

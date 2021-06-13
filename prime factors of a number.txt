@@ -1,0 +1,55 @@
+/*_*_*_*   Struggle _to _succeed :)  *_*_*_*/
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <math.h>
+#include <iomanip>
+
+typedef long long ll;
+typedef long double ld;
+using namespace std;
+void hosSam()
+{
+	std::ios_base::sync_with_stdio(0);
+	cin.tie(NULL);
+	cout.tie(NULL);
+}
+ll a[10000001];
+int main()
+{
+	hosSam();
+	ll num, ans  = 0, x[10000001], y[10000001], o = 0;
+	cin >> num;
+	for (ll i = 2; i <= num; i++)
+	{
+		while (num % i == 0)
+		{
+			num /= i; 
+			ans  += i;
+			a[i]++;
+		}
+	}
+	for (ll i = 0; i < 10000001; i++)
+	{
+		
+		if (a[i] > 0)
+		{
+			x[o] = i; 
+			y[o] = a[i];
+			o++;
+		}
+
+	}
+	for (ll i = 0; i < o-1; i++)
+	{
+		cout << "(" << x[i] << "^" <<y[i]<< ")*";
+
+	}
+	cout << "(" << x[o - 1] << "^" << y[o - 1] << ")" << endl;
+	
+
+
+	system("pause");
+}

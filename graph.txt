@@ -1,0 +1,97 @@
+/**  I Can  &  I Will  **/
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cstdio>
+#include <algorithm>
+#include <vector>
+#include <map>
+#include <set>
+#include <bitset>
+#include <cmath>
+#include <stack>
+#include <string>
+#include <iomanip>
+#include <queue>
+#include <deque>
+#include <cstring>
+#include <limits>
+#include <sstream>
+#include <stdio.h>
+#include<unordered_map>
+#include <string>
+#define   F     first
+#define   S     second
+#define all(x)  (x).begin(),(x).end()
+#define lp(i,n) for(int i=0;i<n;i++)
+#define pl(i,n) for(int i=n-1;i>=0;i--)
+#define sz(x)  (int(x.size()))
+ 
+#define ren(i,l,r) for(int i=l;i<=r;i++)
+#define endl '\n'
+typedef long long ll;
+typedef long double ld;
+using namespace std;
+ 
+int dy[] = { 1, -1, 0, 0, -1, 1, 1, -1 };
+int dx[] = { 0, 0, 1, -1, 1, -1, 1, -1 };
+ll gcd(ll x, ll y) { return (!y) ? x : gcd(y, x % y); }
+ll lcm(ll x, ll y) { return ((x / gcd(x, y)) * y); }
+ 
+ 
+void file() {
+#ifndef ONLINE_JUDGE
+	freopen("input.txt", "r", stdin);
+	//freopen("output.txt", "w", stdout);
+#endif  !ONLINEJUDGE
+	ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+}
+const int N = 300000;
+/*
+bool valid(int x, int y)
+{
+	return((x >= 0 && x < n) && (y >= 0 && y < n));
+}
+*/
+ 
+vector<vector<int>>v(1100);
+bool vis[305];int c = 1;
+vector<int> ans;
+ll x, y;
+void dfs(int n)
+{
+	
+	vis[n] = 1;
+	if (n == y)c ++;
+	for (int i = 0; i < sz(v[n]); i++)
+	{
+	//	cout << n << " " << v[n][i] << endl;
+		if (vis[v[n][i]] && v[n][i] == y)c = 2;
+		if (!vis[v[n][i]])dfs(v[n][i]);
+	}
+	ans.push_back(n);
+}
+ 
+int main()
+{
+	file();
+	//cout << fixed << setprecision(13);
+	ll n, m, q; cin >> n >> m >> q;
+ 
+	lp(i, m)
+	{
+		ll l, r; 
+	 cin >> l >> r;
+		v[l].push_back(r);
+	}
+ 
+	while (q--)
+	{c = 0;
+		cin >> x >> y;
+		memset(vis, 0, sizeof vis);
+		dfs(x);
+		if (c&&x!=y)cout << "YES\n";
+		else if(x==y&&c>1)cout << "YES\n";
+		else cout << "NO\n";
+	}
+ 
+}

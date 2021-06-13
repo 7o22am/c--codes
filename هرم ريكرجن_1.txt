@@ -1,0 +1,36 @@
+
+/*_*_*_*   Struggle _to _succeed :)  *_*_*_*/
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <math.h>
+#include <iomanip>
+typedef long long ll;
+typedef long double ld;
+using namespace std;
+void hosSam()
+{
+	std::ios_base::sync_with_stdio(0);
+	cin.tie(NULL);
+	cout.tie(NULL);
+}
+void sum(int x ,int p=0)
+{
+	if (p == x)
+		return;
+	sum(x, p + 1);
+	for (int i = p; i < x; i++)
+		cout << "*";
+	cout << endl;
+	
+
+}
+	int main()
+{
+		hosSam();
+		
+		sum(5);
+	system("pause");
+}

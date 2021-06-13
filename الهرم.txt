@@ -1,0 +1,38 @@
+
+/*_*_*_*   Struggle _to _succeed :)  *_*_*_*/
+
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <math.h>
+#include <iomanip>
+
+using namespace std;
+typedef long long ll;
+typedef long double ld;
+void sum(int n, int p = 0)
+{
+	if (p == n)
+		return;
+
+	for (int l = 1; l <=n - p; l++)
+		cout << " ";
+	for (int l = 1; l <= p * 2 - 1; l++)
+		cout << "*";
+	cout << endl;
+	sum(n, p=p+1);
+	
+}
+int main()
+{
+	int x;
+	cin >> x;
+	
+
+	sum(x);
+	
+	system("pause");
+	return 0;
+}

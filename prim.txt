@@ -1,0 +1,28 @@
+
+#include <iostream>
+#include <cmath>
+#include <algorithm>
+using namespace std ;
+int main ()
+{
+
+	int  a,n=0,m=0;
+	cin>>a;
+
+	if (a<=1)
+		cout<<"No"<<endl;
+	else 
+	{
+	for (int i=2 ; i<sqrt(a); i++)
+	{
+		if (a%i==0)
+			n++;
+		else 
+			m++;
+	}
+	if (n>0)
+		cout<<"NO"<<endl;
+	else 
+		cout<<"YES"<<endl;
+	}
+}

@@ -1,0 +1,21 @@
+MOD = 1000000007
+def iterative_power(a, b):
+    """
+    Returns the result of a^b i.e. a**b
+    We assume that a >= 1 and b >= 0
+    """
+    result = 1
+    while b > 0:
+        result = (result * a) % MOD
+        b -= 1
+    return result % MOD
+print iterative_power(2, 1)
+# Output: 2
+print iterative_power(2, 2)
+# Output: 4
+print iterative_power(2, 4)
+# Output: 16
+print iterative_power(3, 4)
+# Output: 81
+print iterative_power(2, 100)
+# Output: 976371285

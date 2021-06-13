@@ -1,0 +1,51 @@
+/*_*_*_*   Struggle _to _succeed :)  *_*_*_*/
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <math.h>
+#include <iomanip>
+#include <vector>
+#include <map>
+#include <set> 
+#include<queue>
+#include<deque>
+typedef long long ll;
+typedef long double ld;
+using namespace std;
+void hosSam()
+{
+	std::ios_base::sync_with_stdio(0);
+	cin.tie(NULL);
+	cout.tie(NULL);
+}
+
+
+int main()
+{
+	hosSam();
+	ll x;
+	cin >> x;
+	string s;
+	map<string , int>mpc;
+	for (int i = 0; i < x; i++)
+	{
+		cin >> s;
+		mpc[s]++;
+	}
+	cout << mpc.size() << endl;
+	for (auto it : mpc)
+	{
+		cout << it.first << " " << it.second << endl;
+	}
+	if (mpc["ali"] != 0) 
+	{  
+		cout << "FOUND" << endl;
+	}
+	else 
+	{
+		cout << "NOT FOUND " << endl;
+	}
+	system("pause");
+}

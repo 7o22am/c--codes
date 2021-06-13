@@ -1,0 +1,43 @@
+/*_*_*_*   Struggle _to _succeed :)  *_*_*_*/
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <math.h>
+#include <iomanip>
+
+typedef long long ll;
+typedef long double ld;
+using namespace std;
+void hosSam()
+{
+	std::ios_base::sync_with_stdio(0);
+	cin.tie(NULL);
+	cout.tie(NULL);
+}
+ll a[10];
+int main()
+{
+	hosSam();
+
+	ll  a, b, c, n, m, sum;
+
+	cin >> a >> b >> c;
+
+	if (a>b)
+
+		swap(a, b);
+
+	m = a / c;
+	n = b / c;
+	if (a%c != 0)
+		m++;
+
+	sum = ((((n*(n + 1)) / 2) - ((m*(m + 1)) / 2)) + m)*c;
+
+	cout << sum << endl;
+
+
+		system("pause");
+}

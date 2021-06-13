@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	long long  a;
+	cin>>a;
+	for (int i=2; i<=1; i++)
+	{
+		if (a%i==0)
+		{
+			if (i==a)
+				cout <<"yas"<<endl;
+			else if (i==1)
+				cout<<"no"<<endl;
+		}
+
+		else 
+			cout<<"no"<<endl;
+
+
+	}
+}

@@ -1,0 +1,12 @@
+MOD = 1000000007
+def iterative_power(a, b):
+    """
+    Returns the result of a^b i.e. a**b
+    We assume that a >= 1 and b >= 0
+    """
+    result = 1
+    while b > 0:
+        result = (result * a) % MOD
+        b -= 1
+    return result % MOD
+//////////////////////////////////////////////

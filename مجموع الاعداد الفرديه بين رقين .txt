@@ -1,0 +1,59 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+
+{
+	
+int y, x ,n=0;
+	
+cin>>y>>x;
+
+
+if (x>y)
+
+{
+
+for (int i=y; i<x-1; i++)
+
+{ 
+	  y++;
+
+	if (y%2!=0)
+
+		n=n+y;
+	
+
+}
+
+cout<<n<<endl;
+
+
+
+}
+
+else
+
+{
+
+for (int i=x; i<y-1; i++)
+
+{ 
+	  x++;
+
+	if (x%2!=0)
+
+		n=n+x;
+
+	
+}
+
+cout<<n<<endl;
+
+}
+
+
+}
+

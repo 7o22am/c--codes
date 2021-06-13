@@ -1,0 +1,47 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <sstream>
+#include <cmath>
+#include <math.h>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	std::ios_base::sync_with_stdio(0);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	long long   x, sum = 0, sum1 = 0, a[100], n = 0;
+	cin >> x;
+
+	for (int l = 2; l < x; l++)
+	{
+		for (int i = 2; i < l; i++)
+		{
+			if (l%i == 0)
+			{
+				sum++;
+			}
+		}
+		if (sum == 0)
+		{
+			sum1++;
+			a[n] = l;
+			n++;
+		}
+		
+		
+	}
+	cout << sum1 << endl;
+	sort ( a, a + n);
+	for (int q = 0; q < n; q++)
+	{
+		cout << a[q] << " ";
+	}
+	cout << endl;
+
+	system("pause");
+	return 0;
+}

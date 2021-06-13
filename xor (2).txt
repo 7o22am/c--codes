@@ -1,0 +1,56 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <sstream>
+#include <cmath>
+#include <math.h>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	std::ios_base::sync_with_stdio(0);
+	cin.tie(NULL);
+	cout.tie(NULL);
+	int  x, y, r, h, n = 0, m = 0, i = 0, l = 0, o = 0;
+	long long a[1000], b[1000], c[1000];
+	cin >> x >> y;
+	while (x != 0)
+	{
+		r = x % 2;
+		n = r * pow(10, i) + n;
+		x = x / 2;
+		a[i] = r;
+		i += 1;
+		o++;
+
+	}
+
+
+	while (y != 0)
+	{
+		h = y % 2;
+		m = h * pow(10, l) + m;
+		y = y / 2;
+		b[l] = h;
+		l += 1;
+		
+	}
+
+	for (int p = 0; p < o; p++)
+	{
+		if (a[p] == b[p])
+			c[p] = 0;
+		else
+			c[p] = 1;
+	}
+	reverse(c, c + o);
+	for (int p = 0; p < o; p++)
+	{
+		cout << c[p];
+	}
+	cout << endl;
+	system("pause");
+	return 0;
+}

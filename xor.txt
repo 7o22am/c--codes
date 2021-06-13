@@ -1,0 +1,56 @@
+note ::
+{  one xor it can be get tow pair always so the number of pairs is even always   }
+
+
+#include <iostream>
+
+using namespace std;
+int t, a[10000000]{0},arr[2000],s[2000],x,c=0;
+int main()
+{
+
+
+    cin>>t;
+
+    for (int i=0 ;i<t ;i++)
+    {
+        cin>>arr[i];
+
+        a[arr[i]]++;
+
+    }
+
+     for (int i=0 ;i<t ;i++)
+    {
+        cin>>arr[i];
+
+        a[s[i]]++;
+
+    }
+
+
+    for(int i=0 ;i<t ;i++)
+    {
+
+        for(int j=0 ; j<t ;j++ )
+        {
+            x=arr[i]^s[j];
+
+            if(a[x]>0)
+                c++;
+
+        }
+
+    }
+
+
+
+    if(c%2==0)
+        cout<<"Ayman"<<endl;
+    else
+        cout<<"Karim"<<endl;
+
+}
+
+
+

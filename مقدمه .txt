@@ -1,0 +1,43 @@
+/*_*_*_*   Struggle _to _succeed :)  *_*_*_*/
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <string>
+#include <cstdio>
+#include <algorithm>
+#include <vector>
+#include <map>
+#include <set>
+#include <bitset>
+#include <cmath>
+#include <stack>
+#include <string>
+#include <iomanip>
+#include <queue>
+#include <deque>
+#include <cstring>
+#include <limits>
+#include <sstream>
+#include <stdio.h>
+typedef long long ll;
+typedef long double ld;
+#define   F     first
+#define   S     second
+#define sz(x)  (int(x.size()))
+#define endl '\n'
+#define  hosSam   std::ios_base::sync_with_stdio(0),cin.tie(NULL),cout.tie(NULL);
+#define all(v) ((v).begin()),((v).end())
+int dy[] = { 1, -1, 0, 0, -1, 1, 1, -1 };
+int dx[] = { 0, 0, 1, -1, 1, -1, 1, -1 };
+ll gcd(ll x, ll y) { return (!y) ? x : gcd(y, x % y); }
+ll lcm(ll x, ll y) { return ((x / gcd(x, y)) * y); }
+
+using namespace std;
+int main()
+{
+	hosSam
+		//	cout << fixed << setprecision(2);
+	   //  freopen("output.txt", "w", stdout);
+
+
+	 system("pause");
+}

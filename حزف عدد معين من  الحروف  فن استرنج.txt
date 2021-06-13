@@ -1,0 +1,58 @@
+
+/*_*_*_*   Struggle _to _succeed :)  *_*_*_*/
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <math.h>
+#include <iomanip>
+
+typedef long long ll;
+typedef long double ld;
+using namespace std;
+void hosSam()
+{
+	std::ios_base::sync_with_stdio(0);
+	cin.tie(NULL);
+	cout.tie(NULL);
+}
+ll a[27];
+int main()
+{
+	hosSam();
+	ll x, y, b[27], ans = 0, o = 0, p = 0;
+	cin >> x >> y;
+	string s, f, d;
+	cin >> s;
+	for (int i = 0; i < s.size(); i++)
+		a[s[i] - 'a']++;
+	while (ans < y)
+	{	
+		f = "";
+		for (int i = 0; i < s.size(); i++)
+		{	
+			if (s[i] != 'a' + o)
+				f += s[i];
+			else
+			{
+				if (ans == y)
+				{
+					p = i;
+					d = s;
+					break;
+				}
+				ans++;
+			}
+		}
+	
+		o++;
+		s = f;
+	}
+	cout << f;
+	for (int i = p; i < d.size(); i++)
+		cout << d[i];
+
+	cout << endl;
+system("pause");
+}

@@ -1,0 +1,48 @@
+
+/*_*_*_*   Struggle _to _succeed :)  *_*_*_*/
+
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <cmath>
+#include <math.h>
+#include <iomanip>
+using namespace std;
+typedef long long ll;
+ 
+int main()
+{
+
+	ll  num, c=0;
+		cin >> num;
+	    num=abs(num);
+		if (num == '0')
+		{
+			cout << "0" << endl;
+
+		}
+		else
+		{
+			for (ll i = 1; i < (sqrt(num) + 1); i++)
+			{
+				if (num % i == 0 && i*i != num)
+				{
+					c += i;  c += (num / i);
+
+				}
+				else if (num % i == 0 && i*i == num)
+				{
+					c += i;
+				}
+				if (i == (num / i - 1))
+					break;
+			}
+			cout << c << endl;
+		}
+		
+
+//	system("pause");
+	return 0;
+}
+}
